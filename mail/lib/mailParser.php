@@ -102,24 +102,3 @@
 		}
 	}
 
-$mail = mailParser::getInstance();
-//$mailData = file_get_contents("/var/www/html/mail/mailbody.txt");
-$mailData = file_get_contents("php://stdin");
-
-//とりあえずメールのソースを保存しとく
-$date = date( "Ymd-H:i:s", time() );
-file_write( $mailData, "/var/www/html/mail/mail/source/" . $date . ".txt" );
-
-//メールのタイトルをファイル名にメール本文を保存
-$mail->setMailData( $mailData );
-$title = $mail->getMailData( "subject");
-$outputPath = "/var/www/html/mail/mail/%s.txt";
-$outputPath = sprintf( $outputPath, $title );
-$mailComponent = $mail->getMailData( "component");
-file_write( $mailComponent[ "text" ], $outputPath );
-
-function file_write( $data, $path ){
-	$fp = fopen( $path, "w" );
-	fwrite( $fp, $data );
-	fclose( $fp );
-}
