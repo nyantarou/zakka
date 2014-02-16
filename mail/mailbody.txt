@@ -1,0 +1,38 @@
+From nyantarou.r@gmail.com Sun Feb 16 00:57:40 2014
+Received: from mail-pa0-f68.google.com (mail-pa0-f68.google.com [209.85.220.68])
+	by www8428ue.sakura.ne.jp (8.14.4/8.14.4) with ESMTP id s1FFvdK5002260
+	for <takkanai@nyantarou.ddo.jp>; Sun, 16 Feb 2014 00:57:39 +0900
+Received: by mail-pa0-f68.google.com with SMTP id kp14so6414942pab.3
+        for <takkanai@nyantarou.ddo.jp>; Sat, 15 Feb 2014 07:57:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=zmdyphZ40M7AlFR5/fuoa7SPjOjwrkG67MDaRBSYt84=;
+        b=aRn248C3BTfXK54D4NaipARYTtVxMMPrd9NtQT58QScrkHgd+ehcWMVmFkF7fKBAkB
+         nq8NU/7tDOl9NYSVYcPiCn7++sDyNCu/mRKq95AkeuU9Ou1jMi32xVwE+n4wuoIfHDaM
+         cz/KreiZdNwUtQBmjKiwNd5qgGegkuGHH97+cix/ZG1fh3fOw0aa5vwd602ZurQR755T
+         hKt22mpd11VHByNbSBV+Dc2wTM8FuC8rGFJOEQRcBUc7w9ixXM1+bpoR9gwq3Ca10e0o
+         4kk0h7mnglCEFqtqW9xwBSAAa2qeMeFJZ5Dib8Rgeugi/mKr8R9K/jW249thc3HkWLzB
+         SvXQ==
+MIME-Version: 1.0
+X-Received: by 10.66.118.71 with SMTP id kk7mr15764084pab.14.1392479859182;
+ Sat, 15 Feb 2014 07:57:39 -0800 (PST)
+Received: by 10.68.146.72 with HTTP; Sat, 15 Feb 2014 07:57:39 -0800 (PST)
+Date: Sun, 16 Feb 2014 00:57:39 +0900
+Message-ID: <CAAug=5n_Uj1S5xB8RLZ=0im+Y2ccV6QkLEmMGz0tythpDu9h=Q@mail.gmail.com>
+Subject: aa
+From: nyan tarou <nyantarou.r@gmail.com>
+To: takkanai@nyantarou.ddo.jp
+Content-Type: multipart/alternative; boundary=e89a8ffbad055d128204f273fbed
+
+--e89a8ffbad055d128204f273fbed
+Content-Type: text/plain; charset=ISO-8859-1
+
+aa
+
+--e89a8ffbad055d128204f273fbed
+Content-Type: text/html; charset=ISO-8859-1
+
+<div dir="ltr">aa</div>
+
+--e89a8ffbad055d128204f273fbed--
