@@ -4,19 +4,37 @@
 
 		const PDO_DSN_BASE = "mysql:dbname=%s;host=%s";
 
+		protected static $instance = null;
+		protected $dbh = array();
+
 		protected static $pdoDefaultParams = array(
 					PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 					PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_CLASS,
 				);
 
-		protected $dbh = null;
 
-		public function __construct( $dbname = "", $hostname = "", $username = "", $password = "" ){
-			$this->dbh = $this->getPdbInstance( $dbname, $hostname, $username, $password );
+		private function __construct(){}
+
+		public static function getInstance(){
+			if( self::$instance === null ){
+				self::$instance = new self;
+			}
+			return self::$instance;
 		}
 
-		public function getDb(){
-			return $this->dbh;
+		//dbオブジェクトを格納
+		public function setDb( $dbname = "", $hostname = "", $username = "", $password = "", $key = "" ){
+			if( $key === "" ){
+				$key = $dbname;
+			}
+			$this->dbh[ $key ] = $this->getPdbInstance( $dbname, $hostname, $username, $password );
+		}
+
+		public function getDb( $key = "" ){
+			if( $key === "" ){
+				return $this->dbh;
+			}
+			return $this->dbh[ $key ];
 		}
 
 		protected function getPdbInstance( $dbname = "", $hostname="", $username = "", $password = "" ){

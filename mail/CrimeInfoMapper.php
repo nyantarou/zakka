@@ -35,8 +35,9 @@ $dbname = "mailDB";
 $hostname = "localhost";
 $username = "maildbuser";
 $password = "nyandbpass";
-$db = new DbFactory( $dbname, $hostname, $username, $password );
-$cim = new CrimeInfoMapper( $db->getDb() );
+$db = DbFactory::getInstance( $dbname, $hostname, $username, $password );
+$db->setDb( $dbname, $hostname, $username, $password );
+$cim = new CrimeInfoMapper( $db->getDb( $dbname ) );
 //var_dump( $cim->select( $target = "*" ) );
 
 

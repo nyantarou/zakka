@@ -13,8 +13,9 @@
 		protected $cim = null;
 
 		public function __construct(){
-			$db = new DbFactory( $this->dbname, $this->hostname, $this->username, $this->password );
-			$this->cim = new CrimeInfoMapper( $db->getDb() );
+			$db = DbFactory::getInstance();
+			$db->setDb( $this->dbname, $this->hostname, $this->username, $this->password );
+			$this->cim = new CrimeInfoMapper( $db->getDb( $this->dbname ) );
 		}
 
 		public function viewCrimeInfoList(){

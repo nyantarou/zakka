@@ -50,8 +50,9 @@ $dbname = "mailDB";
 $hostname = "localhost";
 $username = "maildbuser";
 $password = "nyandbpass";
-$db = new DbFactory( $dbname, $hostname, $username, $password );
-$cim = new CrimeInfoMapper( $db->getDb() );
+$db = DbFactory::getInstance();
+$db->setDb( $dbname, $hostname, $username, $password );
+$cim = new CrimeInfoMapper( $db->getDb( $dbname ) );
 $crimeInfoData = array(
 		"Location" => $locationData,
 		"Date"     => $dateData,
